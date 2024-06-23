@@ -1,0 +1,60 @@
+ .card {
+  padding: 20px;
+  background-color: #ffffff; /* Dark background for card */
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important; /* White label color when focused */
+}
+
+.mat-input-element {
+  color: white !important; /* White input text color */
+}
+
+.example-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mat-raised-button {
+  margin-top: 10px;
+  background-color: #1e90ff; /* Primary button color */
+  color: white; /* Button text color */
+}
+
+.mat-icon-button {
+  position: absolute;
+  right: 0;
+}
+
+.mat-error {
+  color: #ffcccb; /* Light red color for error messages */
+}
+
+.mat-label {
+  color: white !important; /* White label color */
+}
+
+a.btn-primary {
+  color: #1e90ff; /* Link color for login */
+}
+
+.button {
+  background-color: #499c8e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #45a049;
+}

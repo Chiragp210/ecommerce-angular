@@ -1,0 +1,42 @@
+/* src/app/header/header.component.css */
+header {
+    background-color: #3ca7a1;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav h2 {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  header nav ul li a,
+  header nav ul li button {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav ul li a:hover,
+  header nav ul li button:hover {
+    background-color: #29595b;
+  }
+  

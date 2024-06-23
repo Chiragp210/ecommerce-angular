@@ -1,0 +1,68 @@
+<div style="padding: 20px;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div class="card rounded" style="width: 60%; max-width: 600px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; padding-top: 10px; font-size: 30px;">Registration/SignUp</h2>
+        <form (ngSubmit)="onRegister()" [formGroup]="registrationForm" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div class="mx-5" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
+            
+            <!-- Name Field -->
+            <mat-form-field class="px-3" style="width: calc(90% - 10px);" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name" formControlName="name" style="color: black;">
+              <mat-error *ngIf="registrationForm.get('name')?.invalid && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched)">
+                Name is required
+              </mat-error>
+            </mat-form-field>
+            
+            <!-- Email Field -->
+            <mat-form-field class="px-3" style="width: calc(90% - 10px);" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" type="email" formControlName="email" style="color: black;">
+              <mat-error *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+                Valid Email address is required
+              </mat-error>
+            </mat-form-field>
+            
+            <!-- Mobile Field -->
+            <mat-form-field class="px-3" style="width: calc(90% - 10px);" appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input matInput placeholder="Mobile" type="text" formControlName="mobile" style="color: black;">
+              <mat-error *ngIf="registrationForm.get('mobile')?.invalid && (registrationForm.get('mobile')?.dirty || registrationForm.get('mobile')?.touched)">
+                Valid Mobile number is required
+              </mat-error>
+            </mat-form-field>
+            
+            <!-- Address Field -->
+            <mat-form-field class="px-3" style="width: calc(90% - 10px);" appearance="outline">
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="Address" type="text" formControlName="address" style="color: black;">
+              <mat-error *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)">
+                Valid City is required
+              </mat-error>
+            </mat-form-field>
+            
+            <!-- Password Field -->
+            <mat-form-field class="px-3" style="width: calc(90% - 10px);" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password" style="color: black;">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+                Password is required and must be at least 6 characters long
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div class="example-button p-3 rounded">
+            <button type="submit" color="primary" class="button p-3">Register</button>
+          </div>
+  
+          <div class="example-button p-3 rounded">
+            <p style="font-size: larger;">Already have an account? <a routerLink="/" class="btn-primary" role="button">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

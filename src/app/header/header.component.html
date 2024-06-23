@@ -1,0 +1,19 @@
+<header>
+    <nav>
+      <h2>CHIRAG PANCHAL</h2>
+      <ul>
+        
+        <ng-container *ngIf="!isLoggedIn(); else loggedInMenu">
+          <li><a routerLink="/login">Login</a></li>
+          <li><a routerLink="/register">Registration</a></li>
+        </ng-container>
+        <ng-template #loggedInMenu>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/cart">Cart</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+            <li><a href="#" (click)="logout()">Logout</a></li>
+        </ng-template>
+      </ul>
+    </nav>
+  </header>
+  
