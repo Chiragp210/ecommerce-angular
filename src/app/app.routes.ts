@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductDetailsComponent } from './product/product-details.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,7 @@ export const routes: Routes = [
     path: 'cart',
     component: CartComponent
   },
+  { path: 'product/:id', component: ProductDetailsComponent },
   {
     path: '**', // Handle unknown routes
     redirectTo: '/login'

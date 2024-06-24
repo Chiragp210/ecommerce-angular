@@ -24,6 +24,7 @@ export class RegisterComponent {
   submitted = false;
   hide = true;
 
+  
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private routes: Router){
       this.registrationForm = this.formBuilder.group({
         name: ['', Validators.required],

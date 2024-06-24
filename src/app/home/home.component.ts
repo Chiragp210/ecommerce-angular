@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { CartService } from '../cart.service';
 export class HomeComponent implements OnInit{
   products: any[] = [];
 
-  constructor(private http: HttpClient, private cartService: CartService) {}
+  constructor(private http: HttpClient, private cartService: CartService,private router: Router) {}
 
   ngOnInit(): void {
     this.fetchProducts();
@@ -38,5 +39,14 @@ export class HomeComponent implements OnInit{
     this.cartService.addToCart(product);
     console.log('Adding to cart:', product);
   }
+
+  viewProductDetails(product: any): void {
+    if (product && product._id) {
+      this.router.navigate(['/product', product._id]); // Use product._id
+    } else {
+      console.error('Invalid product id:', product);
+    }
+  }
+  
 
 }

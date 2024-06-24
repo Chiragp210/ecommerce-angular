@@ -50,14 +50,14 @@
     padding: 5px 10px;
     font-size: 14px;
     border: none;
-    background-color: #007bff;
+    background-color: #3ca7a1;
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
   }
   
   .cart-item-details button:hover {
-    background-color: #0056b3;
+    background-color: #3ca7a1;
   }
   
   .cart-total {
